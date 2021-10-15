@@ -8,7 +8,7 @@ dist文件夹、dockerfile、nginx.conf在同一目录下运行 docker build即�
 ```shell
 # vue脚手架项目 [-f dockerfile]
 docker build . -t imagename:version
-# 转码打包h5站点并构建镜像(powershell使用&&会报错，可换成gitbash执行命令)
+# 转码打包h5站点并构建镜像(powershell使用&&会报错，可换成git bash执行命令)
 npm run build && docker build . -t imagename:version
 ```
 
