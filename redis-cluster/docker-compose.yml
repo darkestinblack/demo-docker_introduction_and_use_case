@@ -1,0 +1,119 @@
+# 六节点的redis cluster，三主三从
+version: '2'
+
+# 持久卷
+volumes:
+  redis-cluster_data-0:
+    driver: local
+  redis-cluster_data-1:
+    driver: local
+  redis-cluster_data-2:
+    driver: local
+  redis-cluster_data-3:
+    driver: local
+  redis-cluster_data-4:
+    driver: local
+  redis-cluster_data-5:
+    driver: local
+
+# 网络
+networks:
+  redis-cluster:
+    driver: bridge
+
+services:
+  # 监控服务 
+  redis-insight:
+    container_name: redis-insight
+    image: redislabs/redisinsight:1.10.1
+    ports:
+      - '8001:8001'
+    networks: 
+      - redis-cluster
+  # 
+  redis-node-0:
+    container_name: redis-node-0
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-0:/bitnami/redis/data
+    ports:
+      - '36379:6379'
+    networks:
+      - redis-cluster
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+  # 
+  redis-node-1:
+    container_name: redis-node-1
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-1:/bitnami/redis/data
+    ports:
+      - '36380:6379'
+    networks:
+      - redis-cluster
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+  #
+  redis-node-2:
+    container_name: redis-node-2
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-2:/bitnami/redis/data
+    ports:
+      - '36381:6379'
+    networks:
+      - redis-cluster      
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+  #
+  redis-node-3:
+    container_name: redis-node-3
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-3:/bitnami/redis/data
+    ports:
+      - '36382:6379'
+    networks:
+      - redis-cluster
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+  #
+  redis-node-4:
+    container_name: redis-node-4
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-4:/bitnami/redis/data
+    ports:
+      - '36383:6379'
+    networks:
+      - redis-cluster
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+  #
+  redis-node-5:
+    container_name: redis-node-5
+    image: docker.io/bitnami/redis-cluster:6.2
+    volumes:
+      - redis-cluster_data-5:/bitnami/redis/data
+    ports:
+      - '36384:6379'
+    networks:
+      - redis-cluster
+    depends_on:
+      - redis-node-0
+      - redis-node-1
+      - redis-node-2
+      - redis-node-3
+      - redis-node-4
+    environment:
+      - 'REDIS_PASSWORD=123456'
+      - 'REDISCLI_AUTH=123456'
+      - 'REDIS_CLUSTER_REPLICAS=1'
+      - 'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'
+      - 'REDIS_CLUSTER_CREATOR=yes'

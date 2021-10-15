@@ -1,0 +1,366 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>docker - @演说.io</title>
+
+    <meta name="keywords" content="演说，yanshuo, yanshuo.io, 演说.io, 空中演说, 展示文稿, HTML 展示文稿, Web 展示文稿" />
+  	  <meta name="description" content="创作真正跨平台的 HTML5 展示文稿，让你的分享到达世界的任何一个角落" />
+
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  		<!-- Reveal base style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/css/reveal.min.css">
+
+  		<!-- Yanshuo.io seed style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-block.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-hljs-theme-bundler.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-reveal-default-theme.min.css">
+
+  		<!-- Source Sans Web Fonts -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/lib/font/source-sans-pro/source-sans-pro.css">
+
+      <!-- Printing and PDF exports -->
+      <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://yanshuo.io/assets/player//css/print/pdf.css' : '';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+
+      <!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+
+  		<!-- style for "critical path" -->
+  		<style>
+  	  </style>
+  </head>
+  <body>
+    <!-- TODO: a lightweighted loading -->
+
+    <!-- main slides -->
+    <div id="YS" class="at-code-lh-15" style="width:100%;height:100%;" data-reveal-theme="solarized" data-highlight-theme="solarized-dark" data-ys-title="docker" data-ys-user="lazilla" data-ys-transition="none" data-ys-backgroundTransition="none" data-ys-transitionSpeed="slow" data-ys-fv="2"><style>
+
+  /*********************************************
+   * THEME: solarized
+   *********************************************/
+
+  /*********************************************
+   * Yanshuo Inject
+   *********************************************/
+
+   .hljs{
+     
+   }
+
+  /*********************************************
+   * GLOBAL STYLES
+   *********************************************/
+
+  body, .reveal, .reveal-preview {
+  	background-color: #fdf6e3;
+  }
+
+  .reveal, .reveal-preview  {
+    
+    color: #657b83;
+  }
+
+  ::selection {
+  	background: #d33682;
+  }
+
+  /*********************************************
+   * HEADERS
+   *********************************************/
+
+  .reveal h1, .reveal-preview h1,
+  .reveal h2, .reveal-preview h2,
+  .reveal h3, .reveal-preview h3,
+  .reveal h4, .reveal-preview h4,
+  .reveal h5, .reveal-preview h5,
+  .reveal h6, .reveal-preview h6 {
+    
+  	color: #586e75;
+  }
+
+
+  /*********************************************
+   * LINKS
+   *********************************************/
+
+  .reveal a, .reveal-preview a {
+  	color: #268bd2;
+    text-decoration: undefined;
+  }
+  	.reveal a:hover, .reveal-preview a:hover {
+  		color: rgb(78, 162, 223);
+  	}
+
+
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+
+  .reveal .controls .navigate-left,
+  .reveal .controls .navigate-left.enabled {
+  	border-right-color: #268bd2;
+  }
+
+  .reveal .controls .navigate-right,
+  .reveal .controls .navigate-right.enabled {
+  	border-left-color: #268bd2;
+  }
+
+  .reveal .controls .navigate-up,
+  .reveal .controls .navigate-up.enabled {
+  	border-bottom-color: #268bd2;
+  }
+
+  .reveal .controls .navigate-down,
+  .reveal .controls .navigate-down.enabled {
+  	border-top-color: #268bd2;
+  }
+
+  .reveal .controls .navigate-left.enabled:hover {
+  	border-right-color: rgb(78, 162, 223);
+  }
+
+  .reveal .controls .navigate-right.enabled:hover {
+  	border-left-color: rgb(78, 162, 223);
+  }
+
+  .reveal .controls .navigate-up.enabled:hover {
+  	border-bottom-color: rgb(78, 162, 223);
+  }
+
+  .reveal .controls .navigate-down.enabled:hover {
+  	border-top-color: rgb(78, 162, 223);
+  }
+
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+
+  .reveal .progress span {
+  	background: #268bd2;
+
+</style><div class="reveal"><div class="slides"><section data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:31.9105312064535px;top:302.2304422277136px;width:800px;" class="at-block at-block--pure"><article data-block-id="1627281057818" class="at-block-content"><p><span style="font-size:28px">标签：DevOps、cli</span></p></article></div><div style="width:161px;height:120.30111524163563px;left:372.8734257742112px;top:54.509341026467276px;" class="at-block at-block--pure"><article data-block-id="1628825331655" class="at-block-content"><img src=https://www.docker.com/sites/default/files/Whale%20Logo332_5.png /></article></div><div style="left:44.708163661043244px;top:220.92456854760522px;width:800px;" class="at-block at-block--pure"><article data-block-id="1628835718207" class="at-block-content"><h3><strong>Docker介绍及使用演示</strong></h3></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:-258.2466346326322px;top:251.04790591157138px;width:800px;" class="at-block at-block--pure"><article data-block-id="1627280985692" class="at-block-content"><h2><strong>目录</strong></h2></article></div><div style="left:294.3015551114589px;top:17.762685062671842px;width:800px;" class="at-block at-block--pure"><article data-block-id="1627280985693" class="at-block-content"><ul><li><p><span style="font-size:36px"><strong>Docker</strong></span></p><ul><li><span style="font-size:28px">演示构建<strong>redis</strong>集群</span></li><li><span style="font-size:28px"><strong>docker </strong>能解决什么问题？</span></li><li><span style="font-size:28px"><strong>docker </strong>介绍</span></li></ul></li><li><p><span style="font-size:36px">案例</span></p><ul><li><span style="font-size:28px">构建镜像（<strong>build</strong>）</span></li><li><span style="font-size:28px">运行镜像（<strong>run</strong>）</span></li><li><span style="font-size:28px">推送仓库（<strong>share</strong>）</span></li><li><strong><span style="font-size:28px">docker compose</span></strong><span style="font-size:28px"> 启动一组应用</span></li></ul></li><li><span style="font-size:36px">阅读延伸</span><ul><li><span style="font-size:28px">OCI</span></li><li><span style="font-size:28px">CNCF</span></li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:70.85573007562536px;top:20.46538685282141px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629257646234" class="at-block-content"><p><strong>演示docker compose 启动redis 集群</strong></p></article></div><div style="left:84.42951328291652px;top:297.31820826061664px;width:800px;height:407.6982741904208px;" class="at-block at-block--pure"><article data-block-id="1629267542683" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-yaml"><span class="line width-3" start="1"><span class="hljs-comment"># docker-compose.yml</span></span>
+<span class="line width-3" start="2"><span class="hljs-attr">version:</span> <span class="hljs-string">'2'</span></span>
+<span class="line width-3" start="3"><span class="hljs-attr">volumes:</span></span>
+<span class="line width-3" start="4"><span class="hljs-attr">  redis-cluster_data-0:</span></span>
+<span class="line width-3" start="5"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="6"><span class="hljs-attr">  redis-cluster_data-1:</span></span>
+<span class="line width-3" start="7"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="8"><span class="hljs-attr">  redis-cluster_data-2:</span></span>
+<span class="line width-3" start="9"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="10"><span class="hljs-attr">  redis-cluster_data-3:</span></span>
+<span class="line width-3" start="11"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="12"><span class="hljs-attr">  redis-cluster_data-4:</span></span>
+<span class="line width-3" start="13"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="14"><span class="hljs-attr">  redis-cluster_data-5:</span></span>
+<span class="line width-3" start="15"><span class="hljs-attr">    driver:</span> <span class="hljs-string">local</span></span>
+<span class="line width-3" start="16"></span>
+<span class="line width-3" start="17"><span class="hljs-comment"># 网络</span></span>
+<span class="line width-3" start="18"><span class="hljs-attr">networks:</span></span>
+<span class="line width-3" start="19"><span class="hljs-attr">  redis-cluster:</span></span>
+<span class="line width-3" start="20"><span class="hljs-attr">    driver:</span> <span class="hljs-string">bridge</span></span>
+<span class="line width-3" start="21"></span>
+<span class="line width-3" start="22"><span class="hljs-attr">services:</span></span>
+<span class="line width-3" start="23">  <span class="hljs-comment"># 监控服务</span></span>
+<span class="line width-3" start="24"><span class="hljs-attr">  redis-insight:</span></span>
+<span class="line width-3" start="25"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-insight</span></span>
+<span class="line width-3" start="26"><span class="hljs-attr">    image:</span> <span class="hljs-string">redislabs/redisinsight:1.10.1</span></span>
+<span class="line width-3" start="27"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="28"><span class="hljs-bullet">      -</span> <span class="hljs-string">'8001:8001'</span></span>
+<span class="line width-3" start="29"><span class="hljs-attr">    networks:</span> </span>
+<span class="line width-3" start="30"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="31">  <span class="hljs-comment"># </span></span>
+<span class="line width-3" start="32"><span class="hljs-attr">  redis-node-0:</span></span>
+<span class="line width-3" start="33"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-0</span></span>
+<span class="line width-3" start="34"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="35"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="36"><span class="hljs-attr">      - redis-cluster_data-0:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="37"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="38"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36379:6379'</span></span>
+<span class="line width-3" start="39"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="40"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="41"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="42"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="43"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="44">  <span class="hljs-comment"># </span></span>
+<span class="line width-3" start="45"><span class="hljs-attr">  redis-node-1:</span></span>
+<span class="line width-3" start="46"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-1</span></span>
+<span class="line width-3" start="47"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="48"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="49"><span class="hljs-attr">      - redis-cluster_data-1:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="50"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="51"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36380:6379'</span></span>
+<span class="line width-3" start="52"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="53"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="54"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="55"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="56"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="57">  <span class="hljs-comment">#</span></span>
+<span class="line width-3" start="58"><span class="hljs-attr">  redis-node-2:</span></span>
+<span class="line width-3" start="59"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-2</span></span>
+<span class="line width-3" start="60"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="61"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="62"><span class="hljs-attr">      - redis-cluster_data-2:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="63"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="64"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36381:6379'</span></span>
+<span class="line width-3" start="65"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="66"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span>      </span>
+<span class="line width-3" start="67"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="68"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="69"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="70">  <span class="hljs-comment">#</span></span>
+<span class="line width-3" start="71"><span class="hljs-attr">  redis-node-3:</span></span>
+<span class="line width-3" start="72"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-3</span></span>
+<span class="line width-3" start="73"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="74"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="75"><span class="hljs-attr">      - redis-cluster_data-3:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="76"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="77"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36382:6379'</span></span>
+<span class="line width-3" start="78"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="79"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="80"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="81"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="82"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="83">  <span class="hljs-comment">#</span></span>
+<span class="line width-3" start="84"><span class="hljs-attr">  redis-node-4:</span></span>
+<span class="line width-3" start="85"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-4</span></span>
+<span class="line width-3" start="86"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="87"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="88"><span class="hljs-attr">      - redis-cluster_data-4:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="89"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="90"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36383:6379'</span></span>
+<span class="line width-3" start="91"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="92"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="93"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="94"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="95"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="96">  <span class="hljs-comment">#</span></span>
+<span class="line width-3" start="97"><span class="hljs-attr">  redis-node-5:</span></span>
+<span class="line width-3" start="98"><span class="hljs-attr">    container_name:</span> <span class="hljs-string">redis-node-5</span></span>
+<span class="line width-3" start="99"><span class="hljs-attr">    image:</span> <span class="hljs-string">docker.io/bitnami/redis-cluster:6.2</span></span>
+<span class="line width-3" start="100"><span class="hljs-attr">    volumes:</span></span>
+<span class="line width-3" start="101"><span class="hljs-attr">      - redis-cluster_data-5:</span><span class="hljs-string">/bitnami/redis/data</span></span>
+<span class="line width-3" start="102"><span class="hljs-attr">    ports:</span></span>
+<span class="line width-3" start="103"><span class="hljs-bullet">      -</span> <span class="hljs-string">'36384:6379'</span></span>
+<span class="line width-3" start="104"><span class="hljs-attr">    networks:</span></span>
+<span class="line width-3" start="105"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-cluster</span></span>
+<span class="line width-3" start="106"><span class="hljs-attr">    depends_on:</span></span>
+<span class="line width-3" start="107"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-node-0</span></span>
+<span class="line width-3" start="108"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-node-1</span></span>
+<span class="line width-3" start="109"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-node-2</span></span>
+<span class="line width-3" start="110"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-node-3</span></span>
+<span class="line width-3" start="111"><span class="hljs-bullet">      -</span> <span class="hljs-string">redis-node-4</span></span>
+<span class="line width-3" start="112"><span class="hljs-attr">    environment:</span></span>
+<span class="line width-3" start="113"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_PASSWORD=123456'</span></span>
+<span class="line width-3" start="114"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDISCLI_AUTH=123456'</span></span>
+<span class="line width-3" start="115"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_CLUSTER_REPLICAS=1'</span></span>
+<span class="line width-3" start="116"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_NODES=redis-node-0 redis-node-1 redis-node-2 redis-node-3 redis-node-4 redis-node-5'</span></span>
+<span class="line width-3" start="117"><span class="hljs-bullet">      -</span> <span class="hljs-string">'REDIS_CLUSTER_CREATOR=yes'</span></span>
+</code></pre>
+</article></div><div style="left:83.07213496218732px;top:93.71146015125072px;width:800px;height:265.17355051386465px;" class="at-block at-block--pure"><article data-block-id="1629267928852" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-1" start="1"><span class="hljs-meta">#</span><span class="bash"> 启动六节点的redis集群 </span></span>
+<span class="line width-1" start="2"><span class="hljs-meta">$</span><span class="bash"> docker compose up</span></span>
+<span class="line width-1" start="3"><span class="hljs-meta"></span></span>
+<span class="line width-1" start="4"><span class="hljs-meta">#</span><span class="bash"> 停止并删除容器</span></span>
+<span class="line width-1" start="5"><span class="hljs-meta">$</span><span class="bash"> docker compose down</span></span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:84.19059205190592px;top:37.031630170316305px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629216750029" class="at-block-content"><p><strong>Docker 能解决什么问题？</strong></p></article></div><div style="left:70.45403667893827px;top:111.33952999891015px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629216760263" class="at-block-content"><p>It works on my machine !</p><p>在我的电脑是可行的！</p><p>&nbsp;</p><p>Build once,run anywhere!</p><p>一次构建，到处运行！</p><p>&nbsp;</p><p>Containerize and share <strong>any application</strong><br>Across any combination of <strong>clouds</strong>, <strong>languages </strong>and <strong>frameworks.</strong></p><p>容器化和分享任何应用，跨云、语言、框架。</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:81.59529602595296px;top:35.733982157339824px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629300583556" class="at-block-content"><p><strong>Docker 对于容器的定义</strong></p></article></div><div style="left:85.4882400648824px;top:138.24817518248176px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629300586059" class="at-block-content"><p style="text-align:left">A container is a <strong>standard </strong>unit of software that packages up code and all its dependencies so the application runs <strong>quickly </strong>and <strong>reliably</strong> from one computing environment to another.</p><p style="text-align:left">&nbsp;</p><p style="text-align:left">&nbsp; &nbsp; 容器是一个<strong>标准</strong>的软件单元，它将<strong>代码</strong>和<strong>依赖项</strong>打包，以便应用程序<strong>快速、可靠</strong>地从一个计算环境运行到另一个 。</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:59.19363916293548px;top:28.733084648681956px;width:800px;" class="at-block at-block--pure"><article data-block-id="1628821822005" class="at-block-content"><p><strong>&nbsp;Docker 是什么？</strong></p></article></div><div style="left:103.73371497462837px;top:114.93460578429752px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629211021234" class="at-block-content"><p style="text-align:left"><span style="font-size:36px">&nbsp; &nbsp; Docker 平台是<strong>应用容器化</strong>的一套完整的解决方案。</span></p><p style="text-align:left">&nbsp;</p><p style="text-align:left"><span style="font-size:36px"><strong>Docker 平台：</strong></span></p><ul><li style="text-align:left"><span style="font-size:28px"><strong>docker desktop</strong>（windows、macOS）</span></li><li style="text-align:left"><span style="font-size:28px"><strong>docker engine</strong>（linux）</span></li><li style="text-align:left"><span style="font-size:28px"><strong>docker compose</strong></span></li><li style="text-align:left"><span style="font-size:28px"><strong>docker swam</strong>（编排）</span></li><li style="text-align:left"><span style="font-size:28px"><strong>docker hub</strong>（仓库）</span></li><li style="text-align:left"><a href="https://labs.play-with-docker.com/"><span style="font-size:28px"><strong>docker </strong></span></a><a href="https://labs.play-with-docker.com/"><span style="font-size:28px">线上运行环境</span></a></li></ul><p style="text-align:left">&nbsp;</p><p style="text-align:left">&nbsp;</p><p style="text-align:left">&nbsp;&nbsp;&nbsp; &nbsp;</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:84.19059205190592px;top:30.5433901054339px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629216974506" class="at-block-content"><p><strong>Docker架构图</strong></p></article></div><div style="width:913.8491370952104px;height:477.30277031632886px;left:23.774633808318868px;top:117.06051567674963px;" class="at-block at-block--pure"><article data-block-id="1629216986456" class="at-block-content"><img src=https://docs.docker.com/engine/images/architecture.svg /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:76.40470397404704px;top:33.13868613138686px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629217003869" class="at-block-content"><p><strong>Docker架构说明</strong></p></article></div><div style="left:93.26509578998272px;top:122.58306471492574px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629217017907" class="at-block-content"><ul><li style="text-align:left"><strong><span style="font-size:36px">Docker client（客户端）</span></strong><ul><li style="text-align:left"><span style="font-size:28px"><strong>Docker Desktop、vs code插件 (gui，图形化)</strong></span></li><li style="text-align:left"><span style="font-size:28px"><strong>shell（cli）</strong></span></li></ul></li><li style="text-align:left"><span style="font-size:36px"><strong>Docker daemon（守护进程）</strong></span><ul><li style="text-align:left"><span style="font-size:28px">监听docker api的请求</span></li><li style="text-align:left"><span style="font-size:28px">管理images、&nbsp;containers、networks、volumes</span></li></ul></li><li style="text-align:left"><strong><span style="font-size:36px">Docker registries（仓库）</span></strong><ul><li style="text-align:left"><span style="font-size:28px">本地仓库</span></li><li style="text-align:left"><span style="font-size:28px">外部仓库</span><ul><li style="text-align:left"><span style="font-size:28px">公共仓库（<a href="https://hub.docker.com/">Docker hub</a>）</span></li><li style="text-align:left"><span style="font-size:28px">私有仓库（<a href="https://goharbor.io/">Harbor</a>、）</span></li></ul></li></ul></li></ul><h3 style="text-align:left">&nbsp;</h3><p>&nbsp;</p></article></div><div style="width:252.7818329278183px;height:71.88334608681839px;left:582.9261906076215px;top:599.0590378203427px;" class="at-block at-block--pure"><article data-block-id="1629217035770" class="at-block-content"><img src=https://goharbor.io/img/logos/harbor-horizontal-color.png /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:66.02351987023519px;top:25.35279805352798px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629217104739" class="at-block-content"><h3><strong>Docker objects</strong></h3></article></div><div style="left:62.13057583130576px;top:120.08110300081104px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629217153155" class="at-block-content"><ul><li><span style="font-size:36px"><strong>Images（镜像）</strong></span><ul><li><span style="font-size:28px">交付件</span></li><li><span style="font-size:28px">build、commit、load（离线）、import</span></li><li><span style="font-size:28px">dockerfile、jib</span></li></ul></li><li><h4><span style="font-size:36px"><strong>Containers（容器）</strong></span></h4><ul><li><span style="font-size:28px">镜像运行时</span></li><li><span style="font-size:28px">docker&nbsp;run / docker compose&nbsp;</span></li></ul></li><li><span style="font-size:36px"><strong>Volumes(持久卷)</strong></span><ul><li><span style="font-size:28px">容器状态（数据）持久化</span></li></ul></li><li><span style="font-size:36px"><strong>Networks(网络</strong></span>)<ul><li><span style="font-size:28px">容器间通信</span></li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:51.62993111198867px;top:22.27965956555405px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629218133534" class="at-block-content"><p><strong>Docker objects演示</strong></p></article></div><div style="left:76.28524335854179px;top:112.71475664145821px;width:800px;height:500px;" class="at-block at-block--pure"><article data-block-id="1629257932165" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-2" start="1"><span class="hljs-meta">#</span><span class="bash"> 查看镜像</span></span>
+<span class="line width-2" start="2"><span class="hljs-meta">$</span><span class="bash"> docker images</span></span>
+<span class="line width-2" start="3">REPOSITORY          TAG    IMAGE ID       CREATED        SIZE </span>
+<span class="line width-2" start="4">vsc-volume-inspect  latest b416d27e6d03   21 hours ago   133MB</span>
+<span class="line width-2" start="5"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="6"><span class="hljs-meta">#</span><span class="bash"> 查看容器</span></span>
+<span class="line width-2" start="7"><span class="hljs-meta">$</span><span class="bash"> docker ps </span></span>
+<span class="line width-2" start="8"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="9"><span class="hljs-meta">#</span><span class="bash"> 查看持久卷</span></span>
+<span class="line width-2" start="10"><span class="hljs-meta">$</span><span class="bash"> docker volume ls</span></span>
+<span class="line width-2" start="11"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="12"><span class="hljs-meta">#</span><span class="bash"> 查看网络</span></span>
+<span class="line width-2" start="13"><span class="hljs-meta">$</span><span class="bash"> docker network ls</span></span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:69.49835175489626px;top:19.108008532092327px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629268797576" class="at-block-content"><p><strong>构建H5镜像(build)</strong></p></article></div><div style="left:-26.69631809361239px;top:76.60311475154597px;width:992.747721543533px;height:553.4467713787085px;" class="at-block at-block--pure"><article data-block-id="1629268860046" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-1" start="1"><span class="hljs-meta">$</span><span class="bash"> npm run build &amp;&amp; docker build . -f h5.dockerfile -t lazilla/ag-demo:fe.local</span></span>
+</code></pre>
+<pre class="hljs"><code class="lang-yaml"><span class="line width-2" start="1"><span class="hljs-comment"># dockerfile</span></span>
+<span class="line width-2" start="2"><span class="hljs-string">FROM</span> <span class="hljs-string">nginx</span></span>
+<span class="line width-2" start="3"><span class="hljs-comment"># 设置时区</span></span>
+<span class="line width-2" start="4"><span class="hljs-string">RUN</span> <span class="hljs-string">ln</span> <span class="hljs-bullet">-sf</span> <span class="hljs-string">/usr/share/zoneinfo/Asia/ShangHai</span> <span class="hljs-string">/etc/localtime</span> <span class="hljs-string">\</span></span>
+<span class="line width-2" start="5">  <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">echo</span> <span class="hljs-string">"Asia/Shanghai"</span> <span class="hljs-string">&gt; /etc/timezone \</span></span>
+<span class="line width-2" start="6"><span class="hljs-string">  &amp;&amp; dpkg-reconfigure -f noninteractive tzdata</span></span>
+<span class="line width-2" start="7"><span class="hljs-string">COPY ./dist/ /etc/nginx/html/fe</span></span>
+<span class="line width-2" start="8"><span class="hljs-string">COPY   h5.nginx.conf /etc/nginx/nginx.conf</span></span>
+<span class="line width-2" start="9"><span class="hljs-string">EXPOSE 80</span></span>
+<span class="line width-2" start="10"><span class="hljs-string">WORKDIR /etc/nginx/</span></span>
+<span class="line width-2" start="11"><span class="hljs-string">CMD ["nginx","-g","daemon off;"]</span></span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:72.21310839635447px;top:17.750630211363223px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629271825022" class="at-block-content"><p><strong>java 镜像构建(build)</strong></p></article></div><div style="left:53.209811906146996px;top:104.57048671708355px;width:877.3705642815589px;height:513.5737832072911px;" class="at-block at-block--pure"><article data-block-id="1629271939302" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-1" start="1">docker build -t lazilla/ag-demo:opus-front-sso.1.0.0 . --no-cache</span>
+</code></pre>
+<pre class="hljs"><code class="lang-shell"><span class="line width-2" start="1"><span class="hljs-meta">#</span><span class="bash"> dockerfile</span></span>
+<span class="line width-2" start="2">FROM openjdk:8-jdk-alpine</span>
+<span class="line width-2" start="3">ARG JAR_FILE=*.jar</span>
+<span class="line width-2" start="4">COPY ${JAR_FILE} /app/app.jar </span>
+<span class="line width-2" start="5"><span class="hljs-meta">#</span><span class="bash"> 设置时区</span></span>
+<span class="line width-2" start="6">ENV TZ Asia/Shanghai</span>
+<span class="line width-2" start="7">RUN apk add tzdata &amp;&amp; cp /usr/share/zoneinfo/${TZ} /etc/localtime \</span>
+<span class="line width-2" start="8">    &amp;&amp; echo ${TZ} &gt; /etc/timezone \</span>
+<span class="line width-2" start="9">    &amp;&amp; apk del tzdata</span>
+<span class="line width-2" start="10">EXPOSE 8090/tcp </span>
+<span class="line width-2" start="11">ENTRYPOINT   ["java","-jar","/app/app.jar"]</span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:58.63932518906341px;top:25.894900135737835px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629268887200" class="at-block-content"><p><strong>运行镜像（run）</strong></p></article></div><div style="left:55.924568547605205px;top:135.79018809385298px;width:800px;height:500px;" class="at-block at-block--pure"><article data-block-id="1629274199826" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-1" start="1"><span class="hljs-meta">#</span><span class="bash"> 运行h5镜像</span></span>
+<span class="line width-1" start="2"><span class="hljs-meta">$</span><span class="bash"> docker run --rm -d  -p 80:80/tcp lazilla/ag-demo:fe.local</span></span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:72.21310839635447px;top:24.537521815008752px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629268971168" class="at-block-content"><p><strong>推送仓库（share）</strong></p></article></div><div style="left:95.70271908669713px;top:97.36941587549019px;width:800px;height:500px;" class="at-block at-block--pure"><article data-block-id="1629274458710" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-shell"><span class="line width-2" start="1"><span class="hljs-meta">#</span><span class="bash"> 推送h5镜像</span></span>
+<span class="line width-2" start="2"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:fe.1.0.0</span></span>
+<span class="line width-2" start="3"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:fe.local</span></span>
+<span class="line width-2" start="4"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="5"><span class="hljs-meta">#</span><span class="bash"> 推送sso镜像</span></span>
+<span class="line width-2" start="6"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:opus-front-sso.1.0.0</span></span>
+<span class="line width-2" start="7"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="8"><span class="hljs-meta">#</span><span class="bash"> 推送后台镜像</span></span>
+<span class="line width-2" start="9"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:agsupport-rest.1.0.0</span></span>
+<span class="line width-2" start="10"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:bim-review-rest.1.0.0</span></span>
+<span class="line width-2" start="11"><span class="hljs-meta"></span></span>
+<span class="line width-2" start="12"><span class="hljs-meta">#</span><span class="bash"> 推送数据库镜像</span></span>
+<span class="line width-2" start="13"><span class="hljs-meta">$</span><span class="bash"> docker push lazilla/ag-demo:postgresqlwithdata.1.0.0</span></span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:42.35078534031414px;top:35.39654838084158px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629341879905" class="at-block-content"><p><strong>docker 环境安装</strong></p></article></div><div style="left:83.07213496218732px;top:117.00988947062245px;width:800px;height:600px;" class="at-block at-block--pure"><article data-block-id="1629341985621" class="at-block-content"><iframe src='https://docs.docker.com/get-docker/' data-prevent-swipe allowfullscreen></iframe></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:82.89294403892944px;top:30.543390105433907px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629302674599" class="at-block-content"><p><strong>拓展阅读-linux 容器lxc</strong></p></article></div><div style="left:72.5117599351176px;top:119.6918085969181px;width:800px;height:600px;" class="at-block at-block--pure"><article data-block-id="1629303007269" class="at-block-content"><iframe src='https://linuxcontainers.org/lxc/introduction/#LXC' data-prevent-swipe allowfullscreen></iframe></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:45.465135026199114px;top:34.26844014510277px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629131959286" class="at-block-content"><p>&nbsp;<strong>拓展阅读-OCI规范</strong></p></article></div><div style="left:72.5509875050383px;top:156.79967754937525px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629131976642" class="at-block-content"><p style="text-align:left">&nbsp; &nbsp; Docker 遵循同<strong>OCI&nbsp;</strong>(Open Container Initiative，开放容器计划）规范。</p><p style="text-align:left">&nbsp;</p><p style="text-align:left">&nbsp; &nbsp; OCI 包括容器运行时标准(runtime-spec，<strong>container</strong>)、容器镜像标准(image-spec，<strong>image</strong>)，涵盖了使用容器所需的所有功能。</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:55.29809618796283px;top:29.33165243196223px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629019859649" class="at-block-content"><p><strong>容器与虚拟机对比</strong></p></article></div><div style="left:40.72632003224503px;top:98.41152760983475px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629020161556" class="at-block-content"><p><span style="font-size:36px">容器应用 (container)</span></p></article></div><div style="left:44.75493752519146px;top:398.5562273276905px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629020177620" class="at-block-content"><p><span style="font-size:36px">虚拟机应用(VM)</span></p></article></div><div style="width:956.130592503023px;height:254.9253493779047px;left:8.881784197001252e-16px;top:146.1587622681879px;" class="at-block at-block--pure"><article data-block-id="1629134104714" class="at-block-content"><img src=https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/media/container-diagram.svg /></article></div><div style="width:960px;height:317.1218315617335px;left:0.28980249899234156px;top:422.9344489914025px;" class="at-block at-block--pure"><article data-block-id="1629134145587" class="at-block-content"><img src=https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/media/virtual-machine-diagram.svg /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:50.62434502216848px;top:34.26844014510276px;width:800px;" class="at-block at-block--pure"><article data-block-id="1629020271105" class="at-block-content"><p><strong>容器与虚拟机对比</strong></p></article></div><div style="left:67.39177750906893px;top:194.20395002015314px;width:407.9000403063281px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1629020412970" class="at-block-content"><p style="text-align:left"><strong><span style="font-size:28px">容器（containers）</span></strong></p><ul><li><span style="font-size:28px"><strong>轻量级</strong></span><ul><li><span style="font-size:28px"><strong>MB级（Unionfs）</strong></span></li><li><strong><span style="font-size:28px">迁移性（强）</span></strong></li><li><strong><span style="font-size:28px">虚拟化（操作系统）</span></strong></li></ul></li><li><strong><span style="font-size:28px">启动速度（数秒内）</span></strong></li><li><strong><span style="font-size:28px">隔离性（进程级）</span></strong></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></article></div><div style="left:524.9532446594116px;top:188.72632003224507px;width:411.7694478033051px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1629020443735" class="at-block-content"><p style="text-align:left"><strong><span style="font-size:28px">虚拟机（virtual machines）</span></strong></p><ul><li><span style="font-size:28px"><strong>重量级</strong></span><ul><li><span style="font-size:28px"><strong>GB级</strong></span></li><li><span style="font-size:28px"><strong>迁移性（弱）</strong></span></li><li><span style="font-size:28px"><strong>虚拟化（硬件）</strong></span></li></ul></li><li><span style="font-size:28px"><strong>启动时间（至少数十秒）</strong></span></li><li><span style="font-size:28px"><strong>隔离性（操作系统级）</strong></span></li></ul><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:66.71601929170129px;top:26.77924770430962px;width:800px;" class="at-block at-block--pure"><article data-block-id="1628821159336" class="at-block-content"><p><strong>云原生计算基金会(CNCF)</strong></p></article></div><div style="left:47.44241951454674px;top:85.18347116972059px;width:828.5049447353111px;height:621.3787085514834px;" class="at-block at-block--pure"><article data-block-id="1628825493485" class="at-block-content"><iframe src='https://landscape.cncf.io/?zoom=200' data-prevent-swipe allowfullscreen></iframe></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:72.5117599351176px;top:29.935117599351173px;width:800px;" class="at-block at-block--pure"><article data-block-id="1627302589582" class="at-block-content"><p><strong>docker 概述</strong></p></article></div><div style="left:93.27412814274128px;top:113.20356853203569px;width:800px;height:600px;" class="at-block at-block--pure"><article data-block-id="1629212855966" class="at-block-content"><iframe src='https://docs.docker.com/get-started/overview/' data-prevent-swipe allowfullscreen></iframe></article></div></section><style>.at-block{ position:absolute }</style></div></div></div>
+
+    <!-- dependencies -->
+		<script src="https://yanshuo.io/assets/player/lib/js/head.min.js"></script>
+		<script src="https://yanshuo.io/assets/player/js/reveal.min.js"></script>
+
+    <!-- init -->
+    <script>
+      Reveal.initialize({
+        controls: true,
+        history: true,
+        center: false,
+
+        transition:             'none',
+        backgroundTransition:   'none',
+        transitionSpeed:        'slow',
+
+        // no marked.js
+				// no markdown.js
+				// no highlight.js
+				dependencies: [
+					{ src: 'https://yanshuo.io/assets/player/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'https://yanshuo.io/assets/player/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://yanshuo.io/assets/player/plugin/notes/notes.js', async: true }
+				]
+      });
+    </script>
+  </body>
+</html>

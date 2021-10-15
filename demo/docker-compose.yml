@@ -1,0 +1,83 @@
+version: '3.8'
+
+networks:
+  ag-network:
+    driver: bridge
+
+volumes:
+  agcloud:
+    driver: local
+services:  
+
+  # 有数据数据库  
+  postgresql:
+    container_name: postgresql
+    image: 'lazilla/ag-demo:postgresqlwithdata.1.0.0' 
+    environment:
+      - PGDATA=/var/lib/postgresql/data2
+    ports:
+      - 5432:5432
+    networks:
+      - ag-network  
+
+  # redis
+  redis:
+    container_name: redis
+    image: 'bitnami/redis:6.0.15'
+    environment:
+      - REDIS_PASSWORD=agcim-2020
+    ports:
+      - 6379:6379
+    networks:
+      - ag-network
+
+  # opus-front-sso 服务
+  opus-front-sso:
+    container_name: opus-front-sso
+    image: lazilla/ag-demo:opus-front-sso.1.0.0
+    ports:
+      - 8090:8090
+    networks:
+      - ag-network
+    depends_on: 
+      - postgresql
+      - redis 
+
+  # agsupport-rest
+  agsupport-rest:
+    container_name: agsupport-rest
+    image: lazilla/ag-demo:agsupport-rest.1.0.0
+    ports:
+      - 8292:8292
+    networks:
+      - ag-network
+    depends_on: 
+      - postgresql 
+      - redis
+      - sso-server
+
+  # bim-review-rest
+  bim-review-rest:
+    container_name: bim-review-rest
+    image: lazilla/ag-demo:bim-review-rest.1.0.0
+    ports:
+      - 8299:8299
+    networks:
+      - ag-network
+    depends_on: 
+      - postgresql 
+      - redis
+      - sso-server
+
+  # 前端h5
+  fe-second-stage:
+    container_name: fe-second-stage
+    image: lazilla/ag-demo:fe.1.0.0
+    ports:
+      - 80:80
+    networks:
+      - ag-network
+    depends_on: 
+      - sso-server   
+      - agsupport-rest 
+      - bim-review-rest
